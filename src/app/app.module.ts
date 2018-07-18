@@ -12,6 +12,8 @@ import {
 
 import { AppComponent } from './app.component';
 import { MessagesComponent} from './messages.component'
+import { WebService } from './web.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,15 +22,16 @@ import { MessagesComponent} from './messages.component'
   ],
   imports: [
     BrowserModule,
+    HttpModule,
      BrowserAnimationsModule,
       MatButtonModule,
        MatCardModule,
         MatToolbarModule,
          MatInputModule,
           MatSnackBarModule,
-           MatCheckboxModule 
+           MatCheckboxModule
   ],
-  providers: [],
+  providers: [ WebService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
